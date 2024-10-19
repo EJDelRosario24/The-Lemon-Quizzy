@@ -1,0 +1,78 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+
+
+int main() {
+     std::string introSelection, modeSelection;
+
+
+    //Ouizes Contents
+    std::string Problems[4]={
+        "Q1","Q2","Q3","Q4"
+        };
+
+
+    bool Accessed[4]={
+        false, false, false, false
+    };
+ 
+//Randomizir
+std::cout<<"Lemon Quizy: The Zesty Adventure!  \n\nGet ready for a zesty adventure!\nClick \'s\' to start, \'i\' for instructions"<<"\n"<<std::endl;
+
+
+
+while(true){
+
+    std::cin>>introSelection;;
+if (introSelection=="s"||introSelection=="S"){
+    std::cout<<"Choose your preffered difficulty " <<"\n\nZESTY ADVENTURE"<<"SWEET OR SOUR GAME!\n"<<""<<std::endl;
+     std::cin>>modeSelection;
+         break;
+
+}
+else if(introSelection=="i" || introSelection=="I"){
+            std::cout<<"Instructions:"<<std::endl;
+    
+}
+else{
+         std::cout<<"\nInvalid"<<std::endl;
+
+         
+         std::cout<<"Enter Again"<<std::endl;
+        
+         
+}}
+//Problem Sets
+
+ srand(time(0));
+while(true){
+
+  if(modeSelection=="1"||modeSelection=="a"||modeSelection=="A"){
+//
+          
+ for (int i = 0; i < 4; ++i){
+  int randomizir;
+  do{
+  randomizir = rand()%4;}while (Accessed[randomizir]);
+
+
+ Accessed[randomizir]=true;
+    std::cout<<Problems[randomizir]<<std::endl;
+                           }
+//
+break;
+  }
+
+else{
+    std::cout<<"Not Available"<<std::endl;
+    std::cin >> modeSelection;
+}
+
+
+
+}
+    return 0;
+}
